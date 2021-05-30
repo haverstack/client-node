@@ -1,0 +1,17 @@
+{
+  "transform": {
+    "^.+\\.(t|j)s?$": "ts-jest"
+  },
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|ts?)$",
+  "moduleFileExtensions": ["ts", "js", "json", "node"],
+  "testPathIgnorePatterns": ["/dist/"],
+  "collectCoverage": true,
+  "coverageThreshold": {
+    "global": {
+      "branches": 90,
+      "functions": 90,
+      "lines": 90,
+      "statements": -5
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@haverstack/client",
+  "version": "0.0.0",
+  "description": "A client for Haverstack data repositories.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && rollup -c",
+    "build-ts": "tsc",
+    "clean": "rimraf ./dist",
+    "lint": "tslint --project tsconfig.json -c ./tslint.json",
+    "lint:fix": "tslint --project tsconfig.json -c ./tslint.json --fix",
+    "publish": "git push --tags && npm publish",
+    "test": "cross-env NODE_ENV=test jest --config jestconfig.json"
+  },
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haverstack/client-node.git"
+  },
+  "author": "Jen Garcia <jen@haverstack.com> (https://haverstack.com)",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/haverstack/client-node/issues"
+  },
+  "homepage": "https://github.com/haverstack/client-node#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "cross-env": "^7.0.3",
+    "jest": "^27.0.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.50.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-jest": "^27.0.1",
+    "tslint": "^6.1.3",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^4.3.2"
+  }
+}
