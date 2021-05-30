@@ -4,7 +4,7 @@
     "tslint-eslint-rules"
   ],
   "rules": {
-    "linebreak-style": [true, "LF"],
+    "linebreak-style": "unix",
     "no-console": [true, "log", "error"],
     "variable-name": ["allow-leading-underscore"],
     "interface-name": [true, "never-prefix"],

@@ -11,6 +11,7 @@
     "clean": "rimraf ./dist",
     "lint": "tslint --project tsconfig.json -c ./tslint.json",
     "lint:fix": "tslint --project tsconfig.json -c ./tslint.json --fix",
+    "publish:prep": "npm run lint:fix && npm run test && npm run build && npm pack --dry-run",
     "publish": "git push --tags && npm publish",
     "test": "cross-env NODE_ENV=test jest --config jestconfig.json"
   },
